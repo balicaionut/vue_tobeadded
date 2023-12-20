@@ -1,9 +1,15 @@
+<template>
+  <div class="home-container">
+    HOME
+  </div>
+</template>
+
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style>
+.home-container {
+  padding-left: 4rem;
+  padding-top: 1rem;
+}
+</style>

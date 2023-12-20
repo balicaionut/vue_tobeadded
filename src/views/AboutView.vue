@@ -1,15 +1,54 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about-container">
+    <h1>ToBeAdded</h1>
+    <v-divider></v-divider>
+    <p>{{ description }}</p>
+    <p class="version">Current Version: {{ version }}</p>
+    <v-divider></v-divider>
+    <div>
+      <p style="font-weight: bold; font-size: 1.2rem;">Change log:</p>
+      <p style="font-weight: bold;">version 0.0.1</p>
+      <ul class="change-list">
+        <li>Added About page</li>
+        <li>Added Home page</li>
+        <li>Added NavBar</li>
+        <li>Added Vuetify</li>
+        <li>Added Vue Router</li>
+        <li>Deleted initial template</li>
+      </ul>
+      <p style="font-weight: bold;">version 0.0.0</p>
+      <ul class="change-list">
+        <li>Initial commit</li>
+      </ul>
+    </div>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+<script setup>
+import { ref } from 'vue';
+
+const description = ref('This is an all-in-one modular application.');
+const version = ref('0.0.1');
+</script>
+
+<style scoped>
+.about-container {
+  padding-left: 4rem;
+  padding-top: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+.change-list {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.version {
+  font-size: smaller;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 </style>
