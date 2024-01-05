@@ -5,20 +5,14 @@
         v-model="drawer"
         :rail="rail"
         permanent
-        @click="rail = false"
+        @mouseover="rail = false"
+        @mouseleave="rail = true"
       >
         <v-list-item
           prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
           title="John Smith"
           nav
         >
-          <template v-slot:append>
-            <v-btn
-              variant="text"
-              icon="mdi-chevron-left"
-              @click.stop="rail = !rail"
-            ></v-btn>
-          </template>
         </v-list-item>
 
         <v-divider></v-divider>
@@ -31,12 +25,11 @@
             to="/"
           >
           </v-list-item>
-        </v-list>
 
-        <div class="menu-footer">
-          <v-divider></v-divider>
-
-          <v-list density="compact" nav>
+          <div class="menu-footer">
+          
+            <v-divider></v-divider>
+  
             <v-list-item
               prepend-icon="mdi-help-circle-outline"
               title="About"
@@ -44,8 +37,10 @@
               to="/about"
             >
             </v-list-item>
-          </v-list>
-        </div>
+          </div>
+        </v-list>
+
+        
 
       </v-navigation-drawer>
     </v-layout>
@@ -61,8 +56,6 @@ import { ref } from 'vue'
 
 <style scoped>
   .menu-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: calc(100vh - 150px);
   }
 </style>

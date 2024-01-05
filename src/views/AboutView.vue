@@ -1,10 +1,14 @@
 <template>
   <div class="about-container">
     <h1>ToBeAdded</h1>
-    <v-divider></v-divider>
+
+    <v-divider class="divider"></v-divider>
+
     <p>{{ description }}</p>
     <p class="version">Current Version: {{ version }}</p>
-    <v-divider></v-divider>
+
+    <v-divider class="divider"></v-divider>
+
     <div>
       <p style="font-weight: bold; font-size: 1.2rem;">Change log:</p>
       <p style="font-weight: bold;">version 0.0.1</p>
@@ -18,6 +22,7 @@
       </ul>
       <p style="font-weight: bold;">version 0.0.0</p>
       <ul class="change-list">
+        <li>Add Vue 3 template and recommended IDE setup</li>
         <li>Initial commit</li>
       </ul>
     </div>
@@ -50,5 +55,10 @@ p {
   font-size: smaller;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.divider {
+  opacity: 1 !important;
+  border-color: #d8d8d8 !important;
 }
 </style>
